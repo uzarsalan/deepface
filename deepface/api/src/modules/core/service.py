@@ -50,7 +50,7 @@ def extract_faces(
             align=align,
             anti_spoofing=anti_spoofing,
         )
-        result["results"] = faces_objs
+        result["results"] = list(map(lambda x: x["facial_area"], faces_objs))
         return result
     except Exception as err:
         tb_str = traceback.format_exc()
