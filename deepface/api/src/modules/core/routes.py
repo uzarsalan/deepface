@@ -12,7 +12,7 @@ blueprint = Blueprint("routes", __name__)
 def home():
     return f"<h1>Welcome to DeepFace API v{DeepFace.__version__}!</h1>"
 
-@blueprint.route("/represent", methods=["POST"])
+@blueprint.route("/extract", methods=["POST"])
 def extract():
     input_args = request.get_json()
 
